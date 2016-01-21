@@ -1,2 +1,67 @@
+$navbar-default-bg: lightblue;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  font-weight: bold;
+  letter-spacing: -1px;
+  color: white;
+  text-transform: uppercase;
+}
+
+#logo:hover {
+  color: blue;
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.jumbotron {
+  background-image: asset-url("TheLionKing.png");
+  background-size: cover;
+  height: 600px;
+}
+
+.jumbotron h1 {
+  font-weight: bold;
+  color: lightblue;
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+  text-align: center;
+  letter-spacing: -1px;
+  margin-top: 200px;
+}
+
+.footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+.footer small {
+  float: left;
+}
+
+.footer nav ul {
+  float: right;
+  list-style: none;
+}
+
+.footer nav ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+.footer nav ul li:hover {
+  color: #222;
+}
+
