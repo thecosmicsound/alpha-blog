@@ -31,13 +31,22 @@ $navbar-default-bg: lightblue;
   font-weight: bold;
   color: lightblue;
   text-shadow:
-    -1px -1px 0 black,
-    1px -1px 0 black,
-    -1px 1px 0 black,
-    1px 1px 0 black;
+    -1px -1px 0 blue,
+    1px -1px 0 blue,
+    -1px 1px 0 blue,
+    1px 1px 0 blue;
   text-align: center;
   letter-spacing: -1px;
   margin-top: 200px;
+}
+
+.article-actions {
+  border-top: 1px solid #eaeaea;
+  padding-top: 5px;
+}
+
+.description {
+  margin-top: 0px;
 }
 
 .footer {
