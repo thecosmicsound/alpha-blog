@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
   def create
     #render plain: params[:article].inspect
     #@article = Article.new(params.require(:article).permit(:title, :description))
-    debugger
+    #debugger
     @article = Article.new(article_params)
     @article.user = User.first
     if @article.save
@@ -31,11 +31,11 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def index
-    @articles = Article.all
+  def show
   end
 
-  def show
+  def index
+    @articles = Article.all
   end
 
   def destroy
@@ -52,5 +52,4 @@ class ArticlesController < ApplicationController
     def article_params
       params.require(:article).permit(:title, :description)
     end
-
 end
