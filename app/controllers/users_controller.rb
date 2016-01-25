@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "Welcome to Alpha Blog #{@user.username}."
-      redirect_to articles_path
+      redirect_to users_path
     else
       render 'new'
     end
@@ -21,17 +21,18 @@ class UsersController < ApplicationController
   def update
     if @user.update(user_params)
       flash[:success] = "Your account was successfully updated."
-      redirect_to articles_path
+      redirect_to users_path
     else
       render 'edit'
     end
   end
 
   def show
+    @user_articles = @user.articles.paginate(page: params[:page], per_page: 3)
   end
 
   def index
-    @users = User.all
+    @users = User.paginate(page: params[:page], per_page: 5)
   end
 
   private
